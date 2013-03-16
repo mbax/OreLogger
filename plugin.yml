@@ -1,0 +1,6 @@
+name: OreLogger
+main: com.kdude63.orelogger.main
+version: Build 1
+description: Logs ores broken by players to individual files.
+author: kdude63
+dev-url: http://dev.bukkit.org/server-mods/orelogger
