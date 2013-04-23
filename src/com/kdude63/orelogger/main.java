@@ -12,7 +12,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class main extends JavaPlugin implements Listener{
 	
-	List<Integer> ores;
+	private List<Integer> ores;
 	
 	
 	public void onEnable()
