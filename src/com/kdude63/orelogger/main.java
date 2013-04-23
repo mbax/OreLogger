@@ -1,12 +1,10 @@
 package com.kdude63.orelogger;
 
-import java.io.Console;
 import java.io.File;
 import java.util.List;
 import java.util.logging.Logger;
 
 import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.block.Block;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
@@ -26,8 +24,8 @@ public class main extends JavaPlugin implements Listener{
 		getServer().getPluginManager().registerEvents(this, this);
 		if (!new File(this.getDataFolder().getPath() + File.separatorChar + "config.yml").exists())
             saveDefaultConfig();
-		ores = config.getIntegerList("OresToCheck");
 		config = getConfig();
+		ores = config.getIntegerList("OresToCheck");
 	}
 	
 	@EventHandler
