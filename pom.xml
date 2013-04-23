@@ -31,7 +31,7 @@
   		<finalName>OreLogger</finalName>
   		<resources>
   			<resource>
-	  			<targetpath>.</targetpath>
+	  			<targetPath>.</targetPath>
 	  			<filtering>true</filtering>
 	  			<directory>${basedir}/src
 	  			<includes>
