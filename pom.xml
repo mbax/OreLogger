@@ -28,7 +28,7 @@
   	</dependencies>
   	
   	<build>
-  		<finalname>OreLogger</finalname>
+  		<finalName>OreLogger</finalName>
   		<resources>
   			<resource>
 	  			<targetpath>.</targetpath>
