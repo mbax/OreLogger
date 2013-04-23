@@ -12,7 +12,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class main extends JavaPlugin implements Listener{
 	
-	FileConfiguration config;
 	List<Integer> ores;
 	
 	
@@ -21,7 +20,7 @@ public class main extends JavaPlugin implements Listener{
 		getServer().getPluginManager().registerEvents(this, this);
 		if (!new File(this.getDataFolder().getPath() + File.separatorChar + "config.yml").exists())
             saveDefaultConfig();
-		config = getConfig();
+		FileConfiguration config = getConfig();
 		ores = config.getIntegerList("OresToCheck");
 	}
 	
