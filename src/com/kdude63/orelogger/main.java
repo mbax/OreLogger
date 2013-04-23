@@ -18,7 +18,7 @@ public class main extends JavaPlugin implements Listener{
 	public void onEnable()
 	{
 		getServer().getPluginManager().registerEvents(this, this);
-		if (!new File(this.getDataFolder().getPath() + File.separatorChar + "config.yml").exists())
+		if (!new File(this.getDataFolder().getPath(), "config.yml").exists())
             saveDefaultConfig();
 		FileConfiguration config = getConfig();
 		ores = config.getIntegerList("OresToCheck");
