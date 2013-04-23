@@ -9,26 +9,23 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
+public class main extends JavaPlugin implements Listener {
 
-public class main extends JavaPlugin implements Listener{
-	
-	private List<Integer> ores;
-	
-	
-	public void onEnable()
-	{
-		getServer().getPluginManager().registerEvents(this, this);
-		if (!new File(this.getDataFolder().getPath(), "config.yml").exists())
+    private List<Integer> ores;
+
+    public void onEnable() {
+        getServer().getPluginManager().registerEvents(this, this);
+        if (!new File(this.getDataFolder().getPath(), "config.yml").exists())
             saveDefaultConfig();
-		FileConfiguration config = getConfig();
-		ores = config.getIntegerList("OresToCheck");
-	}
-	
-	@EventHandler
-	public void onBlockBreakEvent(BlockBreakEvent e){
-		this.getLogger().info(e.getBlock().toString());
-		if(ores.contains(e.getBlock())){
-			
-		}
-	}
+        FileConfiguration config = getConfig();
+        ores = config.getIntegerList("OresToCheck");
+    }
+
+    @EventHandler
+    public void onBlockBreakEvent(BlockBreakEvent e) {
+        this.getLogger().info(e.getBlock().toString());
+        if (ores.contains(e.getBlock())) {
+
+        }
+    }
 }
