@@ -2,7 +2,6 @@ package com.kdude63.orelogger;
 
 import java.io.File;
 import java.util.List;
-import java.util.logging.Logger;
 
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.event.EventHandler;
@@ -12,8 +11,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 
 public class main extends JavaPlugin implements Listener{
-	
-	Logger log = Logger.getLogger("Minecraft");
 	
 	FileConfiguration config;
 	List<Integer> ores;
@@ -30,7 +27,7 @@ public class main extends JavaPlugin implements Listener{
 	
 	@EventHandler
 	public void onBlockBreakEvent(BlockBreakEvent e){
-		System.out.println(e.getBlock().toString());
+		this.getLogger().info(e.getBlock().toString());
 		if(ores.contains(e.getBlock())){
 			
 		}
